@@ -7,7 +7,7 @@ export class NavBar extends React.Component {
         const navLinks = pages.map(page => {
             return (
                 <a href={ "/" + page }>
-            { page }
+                    { page }
                 </a>
             )
         });
