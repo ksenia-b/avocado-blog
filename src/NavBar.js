@@ -9,6 +9,7 @@ export class NavBar extends React.Component {
                 <a href={ "/" + page }>
                     { page }
                 </a>
+
             )
         });
         return <nav>{ navLinks }</nav>
