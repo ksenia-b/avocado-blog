@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { NavBar } from './NavBar.js';
-import { Welcome } from './Welcome';
+import { SignInButton } from './signInButton';
 
 import img from './images/background-plant.png';
 import logo from './images/logo.png'
 
 export class ProfilePage extends React.Component {
+
+
     render(){
 
         return (
@@ -17,7 +19,8 @@ export class ProfilePage extends React.Component {
                 </div>
                 <NavBar/>
                 <div className="welcome">
-                    <Welcome name='Oksana' signedIn="true" />
+                    <SignInButton/>
+
                 </div>
                 <br/><br/><br/>
                 <content>

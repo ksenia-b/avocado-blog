@@ -4,17 +4,17 @@ export class Welcome extends React.Component {s
   render() {
     if (this.props.name === 'Oksana' || this.props.signedIn === true) {
       return (
-      	<h2>
+      	<h5>
       	  hello sir {this.props.name} it is truly great to meet you here!!!
-      	</h2>
+      	</h5>
       );
     } else {
       return (
-      	<h2>
+      	<h5>
       	  WELCOME {this.props.name }!
             <br/>
           Are you allowed to reach to the site???!!!!!
-      	</h2>
+      	</h5>
       );
     }
   }
