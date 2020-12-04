@@ -2,13 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { NavBar } from './NavBar.js';
 import { SignInButton } from './signInButton';
+import Toggle from './footer.js'
+import { Widget, addResponseMessage } from 'react-chat-widget';
+import 'react-chat-widget/lib/styles.css';
 
 import img from './images/background-plant.png';
 import logo from './images/logo.png'
 
 export class ProfilePage extends React.Component {
+      componentDidMount() {
+    addResponseMessage("Welcome to this awesome chat!");
+  }
 
-
+  handleNewUserMessage = (newMessage) => {
+    console.log(`New message incomig! ${newMessage}`);
+    // Now send the message throught the backend API
+  }
     render(){
 
         return (
@@ -40,6 +49,23 @@ export class ProfilePage extends React.Component {
 
                     {/*<img className="background-img" src={ img } />*/}
                 </content>
+                <footer>
+                    <div>Column1</div>
+                    <div>Column2</div>
+                    <div>
+                        <div>Enable dark mode on all websites:</div>
+                        <Toggle/>
+                    </div>
+
+                </footer>
+                    <div className="App">
+        <Widget
+          handleNewUserMessage={this.handleNewUserMessage}
+          profileAvatar={logo}
+          title="My new awesome title"
+          subtitle="And my cool subtitle"
+        />
+      </div>
             </div>
         );
     }
