@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { NavBar } from './NavBar.js';
 import { SignInButton } from './signInButton';
+import { PersonalPizza } from './piza.js'
 import Toggle from './footer.js'
 import { Widget, addResponseMessage } from 'react-chat-widget';
 import 'react-chat-widget/lib/styles.css';
@@ -48,6 +49,8 @@ export class ProfilePage extends React.Component {
                     </article>
 
                     {/*<img className="background-img" src={ img } />*/}
+
+                <PersonalPizza/>
                 </content>
                 <footer>
                     <div>Column1</div>
